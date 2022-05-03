@@ -52,6 +52,7 @@ button{
     border: 0;
     outline: 0;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 button span{
@@ -61,4 +62,91 @@ button span{
     width: 26px;
     border-radius: 50%;
     margin-left: 2px;
+    transition: 0.5s, margin-left 0.5s;
+}
+
+.lamp-container{
+    position: absolute;
+    top: -20px;
+    left: 22%;
+    width: 200px;
+}
+
+.light{
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translateX(-50%); /* To put light in center*/
+    width: 700px;
+    margin-left: -10px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.lamp{
+    width: 100%;
+    z-index: 2;
+
+}
+
+.text-container{
+    max-width: 600px;
+    margin-top: 7%;
+    margin-left: 50%;
+}
+
+.text-container h1{
+    font-size: 80px;
+    font-weight: 400;
+}
+
+.text-container a{
+    text-decoration: none;
+    background: #00986f;
+    padding: 14px 40px; /* First Param: Top and Bottom. Second Param: Left and Right */
+    display: inline-block;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 30px;
+    border-radius: 30px;
+
+}
+
+.control{
+    display: flex; /* Side by Side */
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 150px;
+
+}
+
+.control .line{
+    width: 250px;
+    height: 4px;
+    background: #fff;
+    margin: 0 20px;
+    border-radius: 2px;
+}
+
+.control .line span{
+    width: 50%;
+    height: 8px;
+    margin-top: -2px;
+    border-radius: 4px;
+    background: #00986f;
+    display: block;
+}
+
+.active{
+    background: green;
+
+}
+
+.active span{
+    background: #fff;
+    margin-left: 31px;
+}
+
+.on{
+    opacity: 1;
 }
